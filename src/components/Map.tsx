@@ -1,18 +1,7 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMap,
-  useMapEvents,
-} from "react-leaflet";
-import { useEffect, useState } from "react";
-import styles from "./Map.module.css";
-import { useCities } from "../contexts/CitiesContext";
-import { useGeolocation } from "../hooks/useGeolocation";
-import Button from "./Button";
-import { useUrlPostion } from "../hooks/useURLPosition";
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+
+import Button from './Button';
+import styles from './Map.module.css';
 
 function Map() {
   const { cities } = useCities();
@@ -44,8 +33,8 @@ function Map() {
   return (
     <div className={styles.mapContainer}>
       {!geolocationPosition && (
-        <Button type="position" onClick={getPosition}>
-          {isLoadingPosition ? "Loading.." : "Use your position"}
+        <Button type='position' onClick={getPosition}>
+          {isLoadingPosition ? 'Loading..' : 'Use your position'}
         </Button>
       )}
       <MapContainer
@@ -56,7 +45,7 @@ function Map() {
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.fr/hot/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
         {cities.map((city) => (
           <Marker
@@ -76,7 +65,11 @@ function Map() {
   );
 }
 
-function ChangeCenter({ position }) {
+function ChangeCenter({
+  position,
+}: {
+  position: { lat: number; lng: number };
+}) {
   const map = useMap();
   map.setView(position);
   return null;
