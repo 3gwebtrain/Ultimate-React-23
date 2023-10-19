@@ -1,7 +1,6 @@
 import styles from './Homepage.module.css';
 
 export default function Homepage() {
-  const show;
   return (
     <main className={styles.homepage} style={{}}>
       <section>
