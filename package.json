@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "homepage": "https://3gwebtrain.github.io/Ultimate-React-23/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test:precommit": "vitest --environment jsdom --watch=false",
