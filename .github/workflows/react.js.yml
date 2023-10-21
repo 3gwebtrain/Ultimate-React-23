@@ -13,13 +13,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      contents: 'read'
-      id-token: 'write'
-      pages: 'write'
-      actions: 'write'
-      checks: 'write'
-      deployments: 'write'
     strategy:
       matrix:
         node-version: [18.x]
@@ -43,7 +36,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload build directory content
-          path: 'dist/Ultimate-React-23/'
+          path: 'dist/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
