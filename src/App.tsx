@@ -9,10 +9,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path='https://3gwebtrain.github.io/Ultimate-React-23/'
-          element={<HomePage />}
-        />
+        <Route path='/' element={<HomePage />} />
         <Route path='product' element={<Product />} />
         <Route path='pricing' element={<Pricing />} />
         <Route path='app' element={<AppLayout />} />
