@@ -7,7 +7,7 @@ import Product from './pages/Product';
 
 export default function App() {
   return (
-    <BrowserRouter basename='Ultimate-React-23/'>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='product' element={<Product />} />

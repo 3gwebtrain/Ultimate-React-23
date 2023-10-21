@@ -49,3 +49,5 @@ jobs:
         uses: actions/deploy-pages@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          asset_path: ./Ultimate-React-23
