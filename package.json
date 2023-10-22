@@ -10,8 +10,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test:precommit": "vitest --environment jsdom --watch=false",
-    "test:unit": "vitest --environment jsdom",
-    "test:unit:coverage": "vitest run --coverage --environment jsdom",
+    "test:unit": "vitest --environment  jsdom",
+    "coverage": "vitest run --coverage --environment jsdom",
+    "test:coverage": "npx vitest --coverage",
     "prepare": "husky install",
     "stylelint": "npx stylelint \"./**/*.{css,scss,sass}\" --config \"./stylelint.config.cjs\"",
     "stylelint:fix": "npm run stylelint -- --fix",
@@ -24,6 +25,7 @@
     "./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier -w -u"
   },
   "dependencies": {
+    "@testing-library/user-event": "^14.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0"
@@ -43,6 +45,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-testing-library": "^6.1.0",
     "eslint-plugin-vitest-globals": "^1.4.0",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",

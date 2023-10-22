@@ -11,6 +11,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'plugin:testing-library/react',
   ],
   settings: {
     react: {
