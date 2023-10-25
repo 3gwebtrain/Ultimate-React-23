@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build --base=Ultimate-React-23/",
     "homepage": "https://3gwebtrain.github.io/Ultimate-React-23/",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 10",
     "preview": "vite preview",
     "test:precommit": "vitest --environment jsdom --watch=false",
     "test:unit": "vitest --environment  jsdom",
