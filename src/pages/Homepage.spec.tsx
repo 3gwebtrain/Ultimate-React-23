@@ -1,14 +1,23 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { describe } from 'vitest';
 import Homepage from './Homepage';
 
 describe('home page component', () => {
   it('should renders home page ', () => {
-    render(<Homepage />);
+    render(
+      <MemoryRouter>
+        <Homepage />
+      </MemoryRouter>
+    );
   });
-  it('should renders home page ', () => {
-    render(<Homepage />);
-    const h1 = screen.getByRole('heading', { level: 1 });
+  it('should renders home page ', async () => {
+    render(
+      <MemoryRouter>
+        <Homepage />
+      </MemoryRouter>
+    );
+    const h1 = await screen.findByRole('heading', { level: 1 });
     expect(h1).toBeInTheDocument();
     expect(h1).toHaveTextContent(/You travel the world./);
 
